@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome HTML5 Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+</head>
+<body class="background">
+    <div id="app">
+        <header>
+            <nav class="navbar">
+                <div class="left-section">
+                    <ul class="menu">
+                        <a href="#" class="logo"><img src="logo.svg" alt="Logo"></a>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#terms">Terms of Use</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                  
+                </div>
+                <div class="buttons">
+                    <button class="login-btn">Log in</button>
+                    <button class="signup-btn">Sign up</button>
+                </div>
+               
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="HTML5GAME">
+                    <h1>AWESOME HTML5 GAMES<br>
+                        - NO MONEY!</h1>
+                    <p>Your Perfect Place To Get Some</p>
+                    <p>Fun And Excitement</p>
+                    <button class="login-btn2">Log In</button>
+                    <button class="signup-btn2">Play</button>
+                </div>
+                <div class="popup-overlay" @click.self="showPopup = false">
+                    <div class="popup">
+                    <div class = "lol"> <h2>CREATE A FREE ACCOUNT</h2>
+                        <div class="icons">
+                            <div class="icon-with-text">
+                              <img src="dice.png" alt="Icon 1">
+                              <span>1000+ Games <br>
+                                available</span>
+                            </div>
+                            <div class="icon-with-text">
+                              <img src="slot.png" alt="Icon 2">
+                              <span>New game <br>
+                                Every week</span>
+                            </div>
+                            <div class="icon-with-text">
+                              <img src="24h.png" alt="Icon 3">
+                              <span>Support our <br>
+                                users 24/7</span>
+                            </div>
+                          </div>
+                         </div>
+                       
+                        <form class="inputs" @submit.prevent="submitForm">
+                            <input type="text" placeholder="Firstname" v-model="form.firstname" required>
+                            <input type="text" placeholder="Lastname" v-model="form.lastname" required>
+                            <input type="email" placeholder="Email" v-model="form.email" required>
+                            <button type="submit">Join Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section id="games" class="games-section">
+                <h2>Our Games</h2>
+                <h3>Get Virtual Welcome bonus after Sign Up</h3>
+                <div class="main-container">
+                    <div class="games-grid">                   
+                        <div class="game-card">
+                            <img class="game-image" src="gametype.2813.jpg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                        <div class="game-card">
+                            <img class="game-image" src="gametype.4749.jpg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                        <div class="game-card">
+                            <img class="game-image" src="gametype.4298.jpg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                        <div class="game-card">
+                            <img class="game-image" src="gametype.4779.jpg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                        <div class="game-card">
+                            <img class="game-image" src="gametype.5423.jpg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                        <div class="game-card">
+                            <img class="game-image" src="gametype.1882.jpg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                    </div>
+                    <div class="banner-container">
+                        <div class="small-banners">
+                        <div class="game-card">
+                            <img class="game-image2" src="DynamiteRichesMW_BigWin_385x190.jpeg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                        <div class="game-card">
+                            <img class="game-image2" src="GOTM_GatorGold_385x190.jpeg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                        </div>
+                        <div class="game-card">
+                            <img  class="large-banner" src="banner_promo.jpeg" alt="game.title">
+                            <a class="game-title">Double jackpot</a>
+                            <a class="game-info">NetentGames</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="contact-section">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>If you have some questions, send us a message</p>
+                <form @submit.prevent="submitForm">
+                    <div class="form-group">
+                        <label for="firstname">Firstname</label>
+                        <input type="text" id="firstname" v-model="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" v-model="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message here...</label>
+                        <textarea id="message" v-model="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="privacy" v-model="acceptPrivacy" required>
+                        <label for="privacy">Accept The Privacy Policy</label>
+                    </div>
+                    <button class="login-btn" type="submit">Send</button>
+                </form>               
+            </div>
+            <img class="contact-image" src="imagecontact.png" alt="Icon 1">
+        </div>
+
+        
+        <footer>
+            <p> Disclaimer  |  Privacy Policy  |  Terms of Conditions</p>
+            <p> This site does not provide any form of online gambling and delivers information for entertainment and research purposes only. The games listed by Topwinningslots are <br> 
+                intended for adult audience entertainment (underage visitors are restricted) and do not offer real money or prizes. Practicing online free games does not imply future <br>
+                success at 'real money' gambling.</p>
+            <p> 2022 | © Lorem Inc. All Rights Reserved</p>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>
