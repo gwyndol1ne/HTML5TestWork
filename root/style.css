@@ -2,7 +2,7 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  background: url("bg_contact.jpeg") no-repeat center center fixed;
+  background: url('bg_contact.jpeg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow-y: scroll;
@@ -16,7 +16,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("bg_hero.png") no-repeat center center fixed;
+  background: url('bg_hero.png') no-repeat center center fixed;
   background-size: cover;
   z-index: -1;
 }
@@ -33,11 +33,13 @@ body::before {
   padding: 10px 20px;
   z-index: 1000;
 }
-.navbar .left-section {
+
+.left-section {
   display: flex;
   align-items: center;
 }
-.navbar .left-section .menu {
+
+.menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -45,13 +47,16 @@ body::before {
   align-items: center;
   font-size: 1.2em;
 }
-.navbar .left-section .menu li {
+
+.menu li {
   margin-right: 20px;
 }
-.navbar .left-section .menu li:last-child {
+
+.menu li:last-child {
   margin-right: 0;
 }
-.navbar .left-section .menu li a {
+
+.menu a {
   font-size: larger;
   margin-right: 20px;
   text-decoration: none;
@@ -60,7 +65,8 @@ body::before {
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
-.navbar .left-section .menu li a:hover, .navbar .left-section .menu li a.active {
+
+.menu a:hover, .menu a.active {
   background: linear-gradient(to top right, #FA00FF, #4870FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,43 +74,68 @@ body::before {
   border-image: linear-gradient(to top right, #FA00FF, #4870FF);
   border-image-slice: 1;
 }
-.navbar .left-section .logo img {
+
+.logo img {
   height: 50px;
   width: auto;
   margin-right: 35px;
 }
-.navbar .HTML5GAME {
-  font: "Proxima Nova", sans-serif;
+
+.HTML5GAME {
+  font: Proxima Nova;
   font-weight: 700;
   font-size: 38px;
   text-align: center;
-  color: #ffffff;
+  justify-content: center;
+  justify-items: center;
+  color: #fff;
 }
-.navbar .signup-btn2,
-.navbar .login-btn2 {
+
+.signup-btn2 {
   max-height: 30px;
   margin-bottom: 10px;
+  margin-left: 40px;
+  scale: 150%;
   padding: 10px 20px;
-  color: #ffffff;
+  background: linear-gradient(to right, #FA00FF, #4870FF);
+  color: #fff;
+  border: none;
   border-radius: 9px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-.navbar .signup-btn2:hover,
-.navbar .login-btn2:hover {
-  background: linear-gradient(to right, #FA00FF, #4870FF);
-}
-.navbar .signup-btn2 {
-  margin-left: 40px;
-  scale: 150%;
-  background: linear-gradient(to right, #FA00FF, #4870FF);
-}
-.navbar .login-btn2 {
+
+.login-btn2 {
   margin-right: 5px;
   background-color: transparent;
+  max-height: 30px;
+  margin-bottom: 10px;
+  scale: 150%;
+  padding: 10px 20px;
+  color: #fff;
   border: 2px solid white;
+  border-radius: 9px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn, .signup-btn {
+  max-height: 30px;
+  margin-bottom: 10px;
+  scale: 115%;
+  margin-left: 40px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #FA00FF, #4870FF);
+  color: #fff;
+  border-radius: 9px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
@@ -112,48 +143,64 @@ body::before {
   padding: 0rem 1rem;
 }
 
-.game-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  padding: 10px;
-}
 .game-card:hover {
   transform: scale(1.05);
 }
-.game-card .game-image,
-.game-card .banner-image {
+
+.game-image, .banner-image {
   border-radius: 10px;
   object-fit: contain;
   width: 100%;
   height: auto;
 }
-.game-card .game-image2 {
+
+.game-image2 {
+  border-radius: 10px;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
   scale: 105%;
 }
-.game-card .game-content {
+
+.game-content {
   padding: 15px;
 }
-.game-card .game-content .game-title {
+
+.game-title {
   font-size: 18px;
   margin: 10px 0;
 }
-.game-card .game-content .game-buttons {
+
+.game-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.game-card .game-content .game-buttons a {
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: small;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-buttons a {
   text-decoration: none;
   background-color: #00aaff;
-  color: #ffffff;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-.game-card .game-content .game-buttons a:hover {
+
+.game-buttons a:hover {
   background-color: #008ecc;
 }
 
@@ -168,40 +215,71 @@ body::before {
   align-items: center;
 }
 
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+
+.game-info {
+  font-size: 0.7em;
+  text-align: left;
+  color: gray;
+}
+
+.game-title {
+  font-size: 1em;
+}
+
+.grids {
+  scale: 70%;
+  display: flex;
+}
+
 .popup {
   position: relative;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  display: table-column;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 .popup h2 {
   margin-top: 0;
   font-size: 24px;
   color: #ffffff;
   text-align: left;
 }
-.popup .icons {
+
+.icons {
   position: absolute;
   scale: 75%;
   top: 0;
   right: 0;
   display: flex;
 }
-.popup .icons .icon-with-text {
+
+.icon-with-text {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
-.popup .icons .icon-with-text img {
+
+.icon-with-text img {
   margin-right: 5px;
 }
-.popup .icons .icon-with-text span {
+
+.icon-with-text span {
   color: #ffffff;
   font-size: 14px;
 }
+
 .popup input {
   margin-right: 2%;
   display: flex;
@@ -211,12 +289,17 @@ body::before {
   border-radius: 5px;
   font-size: 16px;
 }
+
+.inputs {
+  display: inline-flex;
+}
+
 .popup button {
   display: inline-flex;
   width: 100%;
   padding: 10px;
   background: linear-gradient(to right, #FA00FF, #4870FF);
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -224,17 +307,19 @@ body::before {
 }
 
 .grids {
-  scale: 70%;
   display: flex;
+  flex-wrap: wrap;
 }
-.grids .games-grid {
+
+.games-grid {
   grid-area: games;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   flex: 3 0 60%;
 }
-.grids .banner-grid {
+
+.banner-grid {
   grid-area: banners;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -249,32 +334,36 @@ body::before {
   width: 80%;
   margin: 0 auto;
 }
-.main-container .banner-container {
+
+.banner-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
-.main-container .banner-container .small-banners {
+
+.small-banners {
   display: flex;
   margin-bottom: 10px;
 }
-.main-container .banner-container .small-banners .small-banner {
+
+.small-banner {
   max-width: 100%;
   height: auto;
   margin-right: 10px;
 }
-.main-container .banner-container .small-banners .small-banner:last-child {
+
+.small-banner:last-child {
   margin-right: 0;
 }
-.main-container .banner-container .large-banner {
+
+.large-banner {
   border-radius: 10px;
   max-width: 100%;
   height: auto;
 }
 
-.games-section h2,
-.games-section h3 {
+.games-section h2, h3 {
   margin-left: 11%;
 }
 
@@ -285,24 +374,29 @@ body::before {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
+
 .contact-form h2 {
   margin-top: 0;
 }
-.contact-form .form-group {
+
+.form-group {
   margin-bottom: 15px;
 }
-.contact-form .form-group label {
+
+.form-group label {
   display: block;
   margin-bottom: 5px;
 }
-.contact-form .form-group input,
-.contact-form .form-group textarea {
+
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.contact-form .form-group input[type=checkbox] {
+
+.form-group input[type="checkbox"] {
   width: auto;
   margin-right: 5px;
 }
@@ -311,16 +405,14 @@ body::before {
   display: flex;
   flex-direction: row;
 }
-.contact-section .contact-image {
+
+.contact-image {
   margin-left: 30%;
 }
 
 footer {
   background-color: #06082b;
   text-align: center;
-}
-footer p {
-  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -329,109 +421,137 @@ footer p {
     margin-right: 5%;
     padding: 10px;
   }
-  .navbar .menu {
+
+  .menu {
     font-size: 1em;
   }
-  .navbar .menu li {
+
+  .menu li {
     margin-right: 10px;
   }
-  .navbar .menu li a {
+
+  .menu a {
     font-size: 1em;
     margin-right: 10px;
   }
-  .navbar .logo img {
+
+  .logo img {
     height: 40px;
     margin-right: 20px;
   }
-  .navbar .login-btn,
-  .navbar .signup-btn {
+
+  .login-btn, .signup-btn {
     margin-left: 20px;
     padding: 8px 16px;
     scale: 100%;
   }
+
   .hero {
     padding: 3rem 1rem;
   }
+
   .popup {
     padding: 1rem;
     max-width: 300px;
   }
-  .HTML5GAME {
-    font-size: 28px;
-  }
-  .game-card {
-    width: 100%;
-  }
-  .game-card .game-image,
-  .game-card .game-image2 {
-    width: 100%;
-  }
-  .main-container {
-    flex-direction: column;
-  }
-  .main-container .games-grid,
-  .main-container .banner-grid {
-    grid-template-columns: 1fr;
-  }
-  .main-container .banner-container {
-    margin-top: 20px;
-  }
-  .contact-form {
-    margin-left: 5%;
-    width: 90%;
-  }
-  .contact-image {
-    margin-left: 5%;
-  }
-  footer {
-    padding: 1rem;
-  }
-}
-@media (max-width: 480px) {
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
-  .navbar .menu {
+
+  .left-section {
+    margin-bottom: 10px;
+  }
+
+  .menu {
     flex-direction: column;
     align-items: flex-start;
   }
-  .navbar .menu li {
+
+  .menu li {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  .navbar .menu li a {
+
+  .menu a {
     margin-right: 0;
   }
-  .navbar .logo img {
+
+  .logo img {
     height: 30px;
     margin-right: 0;
   }
-  .navbar .login-btn,
-  .navbar .signup-btn {
+
+  .login-btn, .signup-btn {
     margin-left: 0;
     margin-bottom: 10px;
     padding: 6px 12px;
     scale: 90%;
   }
+
   .hero {
     padding: 2rem 1rem;
   }
+
+  .HTML5GAME {
+    font-size: 28px;
+  }
+
+  .game-card {
+    width: 100%;
+  }
+
+  .game-image, .game-image2 {
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .games-grid, .banner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-container {
+    margin-top: 20px;
+  }
+
+  .contact-form {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .contact-image {
+    margin-left: 5%;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
   .HTML5GAME {
     font-size: 24px;
   }
+
   .game-title {
     font-size: 16px;
   }
+
   .contact-form {
     width: 90%;
   }
+
   .popup {
     max-width: 80%;
   }
+
   .popup input {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
